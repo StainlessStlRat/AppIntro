@@ -155,6 +155,25 @@ abstract class AppIntroBaseFragment : Fragment(), SlideSelectionListener, SlideB
         // titleTypeface?.applyTo(titleText)
         // descTypeface?.applyTo(descriptionText)
 
+        val longDescription = SpannableStringBuilder()
+        longDescription.append("First Part Not Bold ")
+        val start = longDescription.length
+        longDescription.append("BOLD")
+        longDescription.setSpan(
+            ForegroundColorSpan(-0x33ab00),
+            start,
+            longDescription.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        longDescription.setSpan(
+            StyleSpan(Typeface.BOLD),
+            start,
+            longDescription.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        longDescription.append(" rest not bold")
+        descriptionText.text = longDescription
+
         slideImage.setImageResource(drawable)
         when {
             bgDrawable != 0 -> {
