@@ -141,19 +141,19 @@ abstract class AppIntroBaseFragment : Fragment(), SlideSelectionListener, SlideB
         titleText.text = title
         descriptionText.text = description
 
-        if (titleColorRes != 0) {
-            titleText.setTextColor(ContextCompat.getColor(requireContext(), titleColorRes))
-        } else if (titleColor != 0) { // Fallback to deprecated static color
-            titleText.setTextColor(titleColor)
-        }
-        if (descColorRes != 0) {
-            descriptionText.setTextColor(ContextCompat.getColor(requireContext(), descColorRes))
-        } else if (descColor != 0) { // Fallback to deprecated static color
-            descriptionText.setTextColor(descColor)
-        }
+        // if (titleColorRes != 0) {
+        //     titleText.setTextColor(ContextCompat.getColor(requireContext(), titleColorRes))
+        // } else if (titleColor != 0) { // Fallback to deprecated static color
+        //     titleText.setTextColor(titleColor)
+        // }
+        // if (descColorRes != 0) {
+        //     descriptionText.setTextColor(ContextCompat.getColor(requireContext(), descColorRes))
+        // } else if (descColor != 0) { // Fallback to deprecated static color
+        //     descriptionText.setTextColor(descColor)
+        // }
 
-        titleTypeface?.applyTo(titleText)
-        descTypeface?.applyTo(descriptionText)
+        // titleTypeface?.applyTo(titleText)
+        // descTypeface?.applyTo(descriptionText)
 
         slideImage.setImageResource(drawable)
         when {
